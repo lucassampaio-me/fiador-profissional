@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build:css-watch": "tailwindcss -i ../css/input.css -o ../css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "lucide": "^0.542.0",
+    "swiper": "^11.2.10"
+  }
+}

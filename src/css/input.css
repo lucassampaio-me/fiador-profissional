@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap');
+@import url('swiper-bundle.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply
+        antialiased
+    }
+
+    body {
+        @apply
+        font-manrope
+        text-tertiary
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply
+        font-unbounded font-bold
+        text-primary
+    }
+
+    .container {
+        @apply
+        px-6
+    }
+}
+
+@layer components {
+    /* Button */
+    
+    .btn {
+        @apply
+        px-6 py-5
+        font-unbounded font-medium
+        text-sm text-primary
+        inline-flex items-center justify-center gap-3
+        rounded-md bg-gray-50 hover:bg-gray-100
+        hover:shadow-lg hover:shadow-primary/10
+        transition-all duration-300
+    }
+
+    .btn-primary {
+        @apply
+        bg-secondary text-white hover:bg-secondary-dark
+    }
+
+    /* Content Text */
+
+    .content-text {
+        @apply
+        space-y-6
+    }
+
+    .content-text h2 {
+        @apply
+        text-3xl text-primary
+        font-bold leading-tight
+    }
+    
+    .content-text p {
+        @apply
+        text-tertiary text-lg
+    }
+
+    .content-text-light h2,
+    .content-text-light p {
+        @apply
+        text-white
+    }
+
+    .content-text ul.list-custom-1 {
+        @apply
+        flex flex-col gap-4
+    }
+
+    .content-text ul.list-custom-1 li {
+        @apply
+        flex items-center gap-3
+        text-base
+        font-medium
+        
+        *:text-secondary text-primary
+    }
+
+    .content-text.content-text-light ul.list-custom-1 li {
+        @apply
+        *:text-white text-white
+    }
+
+    /* Header */
+
+    .header-contact {
+        @apply
+        bg-primary text-white
+        py-3
+    }
+
+    .header-contact-group {
+        @apply
+        flex items-center gap-6
+    }
+
+    .header-contact-item {
+        @apply
+        flex items-center gap-2
+        text-sm font-semibold
+    }
+
+    .header-contact-item a {
+        @apply
+        hover:text-secondary
+        transition-all duration-300
+    }
+
+    .header-contact-item svg {
+        @apply
+        w-4 h-4
+    }
+
+    .header-contact-item-whatsapp {
+        @apply
+        px-3 py-1
+        bg-white/10 rounded-md
+        hover:bg-secondary
+        transition-all duration-300
+    }
+
+    .header-nav {
+        @apply
+        bg-white py-4
+    }
+
+    .header-nav .logo {
+        @apply
+        text-xl text-primary
+        font-bold
+    }
+
+    .header-menu {
+        @apply
+        flex items-center gap-6
+    }
+
+    .header-menu ul {
+        @apply
+        flex items-center gap-2
+    }
+
+    .header-menu ul li a {
+        @apply
+        px-3 py-1 rounded-md
+        font-unbounded
+        text-sm hover:bg-gray-100
+        transition-all duration-300
+    }
+
+    /* Hero */
+
+    .hero {
+        @apply
+        relative
+        py-20 
+        bg-gradient-to-t from-secondary to-tertiary from-[-30%] to-[90%]
+    }
+
+    .hero-content .content-text {
+        @apply
+        space-y-6 mb-10
+    }
+
+    .hero-content .content-text h2 {
+        @apply
+        text-4xl text-white
+        font-medium leading-tight
+    }
+
+    .hero-group-buttons {
+        @apply
+        flex items-center gap-4
+    }
+    
+    .hero-content-images {
+        @apply
+        relative rounded-2xl overflow-hidden
+        w-full h-full
+    }
+
+    .hero-content-images .content-images {
+        @apply
+        relative
+        w-full h-full overflow-hidden min-h-[440px]
+    }
+
+    .hero-content-images .content-images .content-image {
+        @apply
+        absolute top-0 left-0
+        w-full h-full
+    }
+
+    .hero-content-images .content-images .content-image img {
+        @apply
+        w-full h-full object-cover
+    }
+
+    .hero-content-images .content-texts {
+        @apply
+        absolute bottom-0 left-0 z-10
+        w-full
+    }
+
+    /* Nossos serviços */
+
+    .nossos-servicos {
+        @apply
+        py-24
+    }
+
+    /* Cards */
+
+    .card-1 {
+        @apply
+        bg-gray-50 rounded-2xl p-6 space-y-16
+        flex flex-col items-start justify-between
+    }
+
+    .card-1-icon {
+        @apply
+        w-16 h-16
+        min-h-16 min-w-16
+        bg-secondary/50 rounded-md
+        flex items-center justify-center
+    }
+
+    .card-1-icon svg {
+        @apply
+        w-8 h-8
+        text-primary
+    }
+
+    .card-1-icon.card-1-icon-big {
+        @apply
+        w-20 h-20
+        min-h-20 min-w-20
+        rounded-lg
+    }
+
+    .card-1-icon.card-1-icon-big svg {
+        @apply
+        w-10 h-10
+    }
+
+    .card-1-content {
+        @apply
+        space-y-2 h-full
+    }
+
+    .card-1-content h3 {
+        @apply
+        text-lg font-bold
+    }
+
+    .card-1-content .card-1-content-button .btn {
+        @apply
+        mt-2
+    }
+
+    .card-1-destaque {
+        @apply
+        bg-tertiary text-white
+    }
+
+    .card-1-destaque .card-1-icon {
+        @apply
+        bg-secondary text-white
+    }
+
+    .card-1-destaque .card-1-icon svg {
+        @apply
+        text-primary
+    }
+
+    .card-1-destaque .card-1-content h3 {
+        @apply
+        text-secondary
+    }
+
+    /* Card Video */
+
+    .card-video {
+        @apply
+        relative
+        flex flex-col items-center justify-center
+    }
+
+    .card-video-content {
+        @apply
+        relative overflow-hidden
+        rounded-2xl
+        shadow-xl shadow-primary/15
+    }
+
+    .card-video-content .card-video-thumbnail {
+        @apply
+        absolute top-0 left-0
+        w-full h-full
+        flex items-center justify-center
+        bg-gradient-to-t from-secondary/80 to-tertiary/30 from-0% to-50%
+    }
+
+    .card-video-content .card-video-thumbnail-button {
+        @apply
+        w-20 h-20
+        bg-white rounded-full
+        flex items-center justify-center
+        text-primary
+    }
+
+    .card-video-content .card-video-thumbnail-button svg {
+        @apply
+        w-8 h-8
+    }
+
+    .card-video-content video {
+        @apply
+        w-full h-full max-h-[600px]
+    }
+
+    .card-video-content .card-video-thumbnail .badge {
+        @apply
+        flex items-center justify-center gap-2 p-2
+        bg-primary rounded-full
+        text-white
+        absolute top-2 left-2 right-2
+        font-unbounded
+    }
+
+    /* Quem somos */
+
+    .quem-somos {
+        @apply
+        py-24
+        bg-tertiary
+    }
+
+    /* Depoimentos */
+
+    .depoimentos {
+        @apply
+        py-24
+        overflow-hidden
+    }
+
+    .depoimentos .swiper .swiper-slide {
+        @apply
+        overflow-visible
+    }
+
+}
