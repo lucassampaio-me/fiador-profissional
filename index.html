@@ -63,11 +63,6 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            Como contratar
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
                                             Fale conosco
                                         </a>
                                     </li>
@@ -264,7 +259,15 @@
                         </div>
 
                         <div class="w-5/12">
-                            <div class="swiper">
+                            <div class="swiper swiper-videos">
+                                <div class="swiper-buttons">
+                                    <button class="swiper-videos-prev">
+                                        <i data-lucide="chevron-left"></i>
+                                    </button>
+                                    <button class="swiper-videos-next">
+                                        <i data-lucide="chevron-right"></i>
+                                    </button>
+                                </div>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card-video">
@@ -294,7 +297,7 @@
                                                         <span>Imóvel residencial</span>
                                                     </div>
                                                 </div>
-                                                <video src="src/videos/depoimento-2.webm"></video>
+                                                <video src="src/videos/depoimento-3.webm"></video>
                                             </div>
                                         </div>
                                     </div>
@@ -310,9 +313,81 @@
                                                         <span>Imóvel residencial</span>
                                                     </div>
                                                 </div>
-                                                <video src="src/videos/depoimento-3.webm"></video>
+                                                <video src="src/videos/depoimento-2.webm"></video>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fale-conosco" class="fale-conosco">
+                <div class="container">
+                    <div class="flex gap-10 items-start justify-center">
+                        <div class="w-5/12">
+                            <div class="content-text mb-6">
+                                <h2>Fale conosco</h2>
+                                <p>Entre em contato através do nosso formulário de contato ou nos envie uma mensagem no WhatsApp</p>
+                            </div>
+
+                            <div class="content-form mb-6">
+                                <form action="" class="grid grid-cols-1 gap-4">
+                                    <div class="form-group">
+                                        <label for="name">Nome:</label>
+                                        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail:</label>
+                                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefone:</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Mensagem:</label>
+                                        <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">
+                                            Enviar mensagem
+                                            <i data-lucide="send"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="w-4/12 grid grid-cols-1 gap-6">
+                            <div class="card-2">
+                                <div class="card-2-header">
+                                    <div class="card-2-header-icon">
+                                        <i data-lucide="phone"></i>
+                                    </div>
+                                    <div class="card-2-header-content">
+                                        <h3>Telefone/WhatsApp</h3>
+                                        <p>11 99999-9999</p>
+                                    </div>
+                                </div>
+                                <div class="card-2-content">
+                                    <a href="https://wa.me/11999999999" target="_blank" class="btn btn-primary">
+                                        Fale no WhatsApp
+                                        <i data-lucide="message-square-more"></i>
+                                    </a>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-2">
+                                <div class="card-2-header">
+                                    <div class="card-2-header-icon">
+                                        <i data-lucide="mail"></i>
+                                    </div>
+                                    <div class="card-2-header-content">
+                                        <h3>E-mail</h3>
+                                        <p>contato@fiadorprofissional.com.br</p>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +399,10 @@
 
         <footer class="footer">
             <div class="container">
-
+                <div class="flex justify-between items-center gap-10">
+                    <p>Copyright © 2025 Fiador Profissional. Todos os direitos reservados.</p>
+                    <a href="#">Política de privacidade</a>
+                </div>
             </div>
         </footer>
     </div>
