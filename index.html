@@ -347,14 +347,14 @@
                             </div>
 
                             <div class="content-form mb-6">
-                                <form action="" class="grid grid-cols-1 gap-4">
+                                <form id="contact-form" class="grid grid-cols-1 gap-4">
                                     <div class="form-group">
                                         <label for="name">Nome:</label>
-                                        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="email">E-mail:</label>
-                                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Telefone:</label>
@@ -362,11 +362,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="message">Mensagem:</label>
-                                        <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+                                        <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">
-                                            Enviar mensagem
+                                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                                            <span class="btn-text">Enviar mensagem</span>
+                                            <span class="btn-loading" style="display: none;">Enviando...</span>
                                             <i data-lucide="send"></i>
                                         </button>
                                     </div>
@@ -418,6 +419,22 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Modal de Agradecimento -->
+    <div id="success-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i data-lucide="check-circle" class="modal-icon"></i>
+                <h3>Mensagem Enviada!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Obrigado pelo seu contato. Em breve entraremos em contato com você!</p>
+                <div class="modal-timer">
+                    <span>Este modal fechará em <span id="timer-count">10</span> segundos</span>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="src/js/lucide.min.js"></script>
