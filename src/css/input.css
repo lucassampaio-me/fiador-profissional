@@ -25,7 +25,7 @@
 
     .container {
         @apply
-        px-6
+        lg:px-6 px-4
     }
 }
 
@@ -93,6 +93,11 @@
 
     /* Header */
 
+    .header .logo {
+        @apply
+        md:text-xl text-lg text-primary
+    }
+
     .header-contact {
         @apply
         bg-primary text-white
@@ -142,12 +147,27 @@
 
     .header-menu {
         @apply
-        flex items-center gap-6
+        flex xl:flex-row flex-row-reverse items-center xl:gap-6 gap-2
+        relative
     }
 
     .header-menu ul {
         @apply
-        flex items-center gap-2
+        xl:flex hidden items-center gap-2
+    }
+
+    .header-menu .menu-mobile {
+        @apply
+        xl:hidden flex flex-row-reverse items-center gap-2
+        absolute top-16 right-0 z-50
+        bg-white rounded-lg p-4
+        flex-col gap-2
+        shadow-lg shadow-primary/10
+    }
+
+    .header-menu button {
+        @apply
+        xl:hidden
     }
 
     .header-menu ul li a {
@@ -180,7 +200,12 @@
 
     .hero-group-buttons {
         @apply
-        flex items-center gap-4
+        flex lg:flex-row flex-col items-center gap-4
+    }
+
+    .hero-group-buttons .btn {
+        @apply
+        w-full lg:w-auto
     }
 
     .hero-swiper .swiper-slide {

@@ -13,8 +13,8 @@
         <header class="header">
             <div class="header-contact">
                 <div class="container">
-                    <div class="flex justify-between items-center gap-10">
-                        <div class="header-contact-group">
+                    <div class="flex md:justify-between justify-center items-center gap-10">
+                        <div class="header-contact-group md:flex hidden">
                             <a href="https://wa.me/11999999999" target="_blank" class="header-contact-item header-contact-item-whatsapp">
                                 <i data-lucide="message-square-share"></i>
                                 <span>Online no WhatsApp</span>
@@ -45,7 +45,7 @@
 
                         <div class="header-nav-group">
                             <div class="header-menu">
-                                <ul>
+                                <ul class="menu-mobile">
                                     <li>
                                         <a href="#nossos-servicos">
                                             Serviços
@@ -68,6 +68,10 @@
                                     </li>
                                 </ul>
 
+                                <button class="btn btn-secondary">
+                                    <i data-lucide="menu"></i>
+                                </button>
+
                                 <a href="" class="btn btn-primary">
                                     Fale no WhatsApp
                                     <i data-lucide="message-square-more"></i>
@@ -82,8 +86,8 @@
         <main class="main">
             <section class="hero">
                 <div class="container">
-                    <div class="flex items-center gap-20">
-                        <div class="w-1/2">
+                    <div class="flex md:flex-row flex-col items-center md:gap-20 gap-10">
+                        <div class="md:w-1/2 w-full">
                             <div class="hero-content">
                                 <div class="content-text content-text-light">
                                     <h2>Sua melhor opção de fiadores qualificados para uma locação com garantia e segurança</h2>
@@ -110,7 +114,7 @@
                             </div>
                         </div>
 
-                        <div class="w-1/2">
+                        <div class="md:w-1/2 w-full max-w-[90%]">
                             <div class="hero-swiper swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -167,7 +171,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-4 gap-6">
+                    <div class="grid lg:grid-cols-4 grid-cols-2 gap-6">
                         <div class="card-1">
                             <div class="card-1-icon">
                                 <i data-lucide="users"></i>
@@ -213,8 +217,8 @@
 
             <section id="quem-somos" class="quem-somos">
                 <div class="container">
-                    <div class="grid grid-cols-12 gap-6 items-center">
-                        <div class="col-span-6">
+                    <div class="grid grid-cols-12 md:gap-y-6 gap-y-10 gap-x-6 items-center">
+                        <div class="md:col-span-6 col-span-12">
                             <div class="content-text content-text-light">
                                 <h2>Quem Somos</h2>
                                 <p>Com mais de 15 anos de experiência no mercado de contratação, somos uma empresa comprometida com respeito, transparência e excelência no atendimento aos nossos clientes. Nosso compromisso com a qualidade e a ética tem nos permitido construir confiança e confiança em segmentos de fiador profissional.</p>
@@ -223,13 +227,13 @@
                             </div>
                         </div>
 
-                        <div class="col-span-3 w-full h-full min-h-[400px]">
+                        <div class="md:col-span-3 col-span-6 w-full h-full min-h-[400px]">
                             <div class="content-video">
                                 <video src="src/videos/video-quem-somos.webm" autoplay muted loop></video>
                             </div>
                         </div>
 
-                        <div class="col-span-3 h-full">
+                        <div class="md:col-span-3 col-span-6 h-full">
                             <div class="card-1 h-full">
                                 <div class="card-1-icon card-1-icon-big">
                                     <i data-lucide="handshake"></i>
@@ -245,12 +249,12 @@
 
             <section id="depoimentos" class="depoimentos">
                 <div class="container">
-                    <div class="flex items-center justify-center gap-10">
-                        <div class="w-4/12">
-                            <div class="content-text">
+                    <div class="flex md:flex-row flex-col items-center justify-center gap-10">
+                        <div class="lg:w-4/12 md:w-1/2 w-full">
+                            <div class="content-text md:text-left text-center">
                                 <h2>Depoimentos</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus mi sed sem aliquet interdum. Curabitur felis leo, laoreet sit amet enim quis, tristique mattis odio. Aenean ex libero, pharetra in nunc sed, aliquam venenatis mi.</p>
-                                <ul class="list-custom-1 font-unbounded">
+                                <ul class="list-custom-1 font-unbounded md:items-start items-center">
                                     <li>
                                         <i data-lucide="smile"></i>
                                         Clientes satisfeitos
@@ -271,7 +275,7 @@
                             </div>
                         </div>
 
-                        <div class="w-5/12">
+                        <div class="lg:w-5/12 w-1/2">
                             <div class="swiper swiper-videos">
                                 <div class="swiper-buttons">
                                     <button class="swiper-videos-prev">
@@ -339,8 +343,8 @@
 
             <section id="fale-conosco" class="fale-conosco">
                 <div class="container">
-                    <div class="flex gap-10 items-start justify-center">
-                        <div class="w-5/12">
+                    <div class="flex lg:flex-row flex-col gap-10 lg:items-start items-center justify-center">
+                        <div class="lg:w-5/12 md:w-1/2 w-full md:max-w-full max-w-xl">
                             <div class="content-text mb-6">
                                 <h2>Fale conosco</h2>
                                 <p>Entre em contato através do nosso formulário de contato ou nos envie uma mensagem no WhatsApp</p>
@@ -375,7 +379,7 @@
                             </div>
                         </div>
 
-                        <div class="w-4/12 grid grid-cols-1 gap-6">
+                        <div class="lg:w-4/12 md:w-1/2 w-full grid grid-cols-1 gap-6">
                             <div class="card-2">
                                 <div class="card-2-header">
                                     <div class="card-2-header-icon">

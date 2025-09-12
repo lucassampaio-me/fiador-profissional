@@ -79,7 +79,7 @@ const heroSwiper = new Swiper('.hero-swiper', {
     allowTouchMove: false,
     autoplay: {
         enabled: true,
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
     },
 });
