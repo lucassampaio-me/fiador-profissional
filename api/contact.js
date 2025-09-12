@@ -133,7 +133,7 @@ export default async function handler(req, res) {
       html: clientEmailHtml,
     });
 
-    await resend.contacts.create({
+    resend.contacts.create({
       email: email,
       name: name,
       phone: phone,
