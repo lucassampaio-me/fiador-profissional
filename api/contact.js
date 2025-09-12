@@ -99,10 +99,10 @@ export default async function handler(req, res) {
           
           <div style="text-align: center; margin-bottom: 25px;">
             <h3 style="color: #2c3e50; font-size: 16px;">Precisa falar conosco agora?</h3>
-            <a href="https://wa.me/11999999999" style="display: inline-block; background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
+            <a href="https://wa.me/11942543949" style="display: inline-block; background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
               💬 WhatsApp
             </a>
-            <a href="tel:11999999999" style="display: inline-block; background-color: #3498db; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
+            <a href="tel:11942543949" style="display: inline-block; background-color: #3498db; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
               📞 Ligar agora
             </a>
           </div>
@@ -120,7 +120,7 @@ export default async function handler(req, res) {
     // Enviar email de notificação para o admin
     await resend.emails.send({
       from: 'Fiador Profissional <contato@fiadorprofissional.com.br>',
-      to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
+      to: [process.env.CONTACT_EMAIL],
       subject: `🏠 Novo contato: ${name}`,
       html: adminEmailHtml,
     });
@@ -133,7 +133,6 @@ export default async function handler(req, res) {
       from: 'Fiador Profissional <contato@fiadorprofissional.com.br>',
       to: [email],
       subject: 'Obrigado pelo seu contato - Fiador Profissional',
-      replay_to: 'fiadorprofissional.me@gmail.com',
       html: clientEmailHtml,
     });
 
