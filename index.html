@@ -47,22 +47,22 @@
                             <div class="header-menu">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="#nossos-servicos">
                                             Serviços
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#quem-somos">
                                             Quem somos
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#depoimentos">
                                             Depoimentos
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#fale-conosco">
                                             Fale conosco
                                         </a>
                                     </li>
@@ -82,7 +82,7 @@
         <main class="main">
             <section class="hero">
                 <div class="container">
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-20">
                         <div class="w-1/2">
                             <div class="hero-content">
                                 <div class="content-text content-text-light">
@@ -111,34 +111,45 @@
                         </div>
 
                         <div class="w-1/2">
-                            <!-- Ideia: Imagens trocando enquanto troca o texto: "Fiadores para imóveis residenciais/imóveis comerciais/lojas/etc." -->
-                            <div class="hero-content-images hidden">
-                                <div class="content-images">
-                                    <div class="content-image">
-                                        <img src="src/images/img-default.jpg" alt="Fiadores para imóveis residenciais">
-                                    </div>
-                                    <div class="content-image">
-                                        <img src="src/images/img-default.jpg" alt="Fiadores para imóveis residenciais">
-                                    </div>
-                                    <div class="content-image">
-                                        <img src="src/images/img-default.jpg" alt="Fiadores para imóveis residenciais">
-                                    </div>
-                                 </div>
-                                 <div class="content-texts">
-                                    <div class="content-texts-list">
-                                        <div class="content-texts-list-item">
-                                            <span class="content-texts-list-title">Fiadores para: </span>
-                                            <ul>
-                                                <li class="content-texts-list-item">imóveis residenciais</li>
-                                                <li class="content-texts-list-item">imóveis comerciais</li>
-                                                <li class="content-texts-list-item">lojas em shopping</li>
-                                                <li class="content-texts-list-item">igrejas</li>
-                                                <li class="content-texts-list-item">salas comerciais</li>
-                                                <li class="content-texts-list-item">entre outros</li>
-                                            </ul>
+                            <div class="hero-swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="content-image">
+                                            <img src="src/images/imoveis-residenciais.webp" alt="Fiadores para imóveis residenciais">
                                         </div>
-                                        <div class="content-texts-list-item">
-                                            <span class="content-texts-list-title">Entre outros</span>
+                                        <div class="card">
+                                            <i data-lucide="home"></i>
+                                            <span>Imóveis residenciais</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="content-image">
+                                            <img src="src/images/imoveis-comerciais.webp" alt="Fiadores para imóveis comerciais">
+                                        </div>
+                                        <div class="card">
+                                            <i data-lucide="building-2"></i>
+                                            <span>Imóveis comerciais</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="content-image">
+                                            <img src="src/images/lojas-shopping.webp" alt="Fiadores para lojas em shopping">
+                                        </div>
+                                        <div class="card">
+                                            <i data-lucide="store"></i>
+                                            <span>Lojas em shopping</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="content-image">
+                                            <img src="src/images/outros-imoveis.webp" alt="Fiadores para outros imóveis">
+                                        </div>
+                                        <div class="card">
+                                            <i data-lucide="briefcase-business"></i>
+                                            <span>Outros imóveis</span>
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +203,7 @@
                                 <h3>Maior garantia</h3>
                                 <p>Você tem a garantia de até 2 imóveis, trabalhamos com total transparência e visando sempre a satisfação de nossos clientes.</p>
                                 <div class="card-1-content-button">
-                                    <a href="#" class="btn btn-secondary w-full">Saiba mais</a>
+                                    <a href="#quem-somos" class="btn btn-secondary w-full">Saiba mais</a>
                                 </div>
                             </div>
                         </div>
@@ -208,12 +219,14 @@
                                 <h2>Quem Somos</h2>
                                 <p>Com mais de 15 anos de experiência no mercado de contratação, somos uma empresa comprometida com respeito, transparência e excelência no atendimento aos nossos clientes. Nosso compromisso com a qualidade e a ética tem nos permitido construir confiança e confiança em segmentos de fiador profissional.</p>
                                 <p>Temos como objetivo encontrar soluções para atender as suas necessidades com qualidade, bom atendimento, agilidade e custos vantajosos.</p>
-                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                                <a href="#depoimentos" class="btn btn-primary">Saiba mais</a>
                             </div>
                         </div>
 
-                        <div class="col-span-3 bg-secondary rounded-2xl w-full h-full min-h-[400px]">
-                            <!-- Vídeo -->
+                        <div class="col-span-3 w-full h-full min-h-[400px]">
+                            <div class="content-video">
+                                <video src="src/videos/video-quem-somos.webm" autoplay muted loop></video>
+                            </div>
                         </div>
 
                         <div class="col-span-3 h-full">

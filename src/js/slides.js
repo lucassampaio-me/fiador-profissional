@@ -63,3 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Hero Swiper
+
+const heroSwiper = new Swiper('.hero-swiper', {
+    effect: 'cards',
+    cardsEffect: {
+        perSlideOffset: 6,
+        perSlideRotate: 2,
+        slideShadows: false,
+    },
+    speed: 800,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    allowTouchMove: false,
+    autoplay: {
+        enabled: true,
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
