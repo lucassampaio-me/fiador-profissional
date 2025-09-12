@@ -99,7 +99,7 @@ export default async function handler(req, res) {
           
           <div style="text-align: center; margin-bottom: 25px;">
             <h3 style="color: #2c3e50; font-size: 16px;">Precisa falar conosco agora?</h3>
-            <a href="https://wa.me/11942543949" style="display: inline-block; background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
+            <a href="https://wa.me/5511942543949" style="display: inline-block; background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
               💬 WhatsApp
             </a>
             <a href="tel:11942543949" style="display: inline-block; background-color: #3498db; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
