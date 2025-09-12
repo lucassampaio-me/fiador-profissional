@@ -133,6 +133,7 @@ export default async function handler(req, res) {
       from: 'Fiador Profissional <contato@fiadorprofissional.com.br>',
       to: [email],
       subject: 'Obrigado pelo seu contato - Fiador Profissional',
+      replay_to: 'fiadorprofissional.me@gmail.com',
       html: clientEmailHtml,
     });
 
