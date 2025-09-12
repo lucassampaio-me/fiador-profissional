@@ -117,29 +117,54 @@ export default async function handler(req, res) {
       </div>
     `;
 
-    // Enviar email de notificação para o admin
-    const adminEmailResult = await resend.emails.send({
-      from: 'Fiador Profissional <contato@resend.dev>',
-      to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
-      subject: `🏠 Novo contato: ${name}`,
-      html: adminEmailHtml,
-    });
+    let adminEmailResult, clientEmailResult;
+    
+    try {
+      // Enviar email de notificação para o admin
+      adminEmailResult = await resend.emails.send({
+        from: 'Fiador Profissional <contato@resend.dev>',
+        to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
+        subject: `🏠 Novo contato: ${name}`,
+        html: adminEmailHtml,
+      });
+      console.log('✅ Admin email enviado:', adminEmailResult);
+    } catch (adminError) {
+      console.error('❌ Erro ao enviar email para admin:', adminError);
+      throw new Error(`Falha no envio do email de notificação: ${adminError.message}`);
+    }
 
-    console.log('Admin email result:', adminEmailResult);
-
-    // Enviar email de confirmação para o cliente
-    const clientEmailResult = await resend.emails.send({
-      from: 'Fiador Profissional <contato@resend.dev>',
-      to: [email],
-      subject: 'Obrigado pelo seu contato - Fiador Profissional',
-      html: clientEmailHtml,
-    });
-
-    console.log('Client email result:', clientEmailResult);
+    try {
+      // Pequena pausa para evitar rate limiting
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Enviar email de confirmação para o cliente
+      clientEmailResult = await resend.emails.send({
+        from: 'Fiador Profissional <contato@resend.dev>',
+        to: [email],
+        subject: 'Obrigado pelo seu contato - Fiador Profissional',
+        html: clientEmailHtml,
+      });
+      console.log('✅ Client email enviado:', clientEmailResult);
+    } catch (clientError) {
+      console.error('❌ Erro ao enviar email para cliente:', clientError);
+      console.error('Email do cliente:', email);
+      
+      // Admin email já foi enviado, então só logamos o erro do cliente
+      // mas não falhamos a requisição completamente
+      return res.status(200).json({ 
+        success: true, 
+        message: 'Mensagem recebida! Houve um problema ao enviar o email de confirmação, mas entraremos em contato em breve.',
+        warning: 'Email de confirmação não pôde ser enviado'
+      });
+    }
     
     return res.status(200).json({ 
       success: true, 
-      message: 'Mensagem enviada com sucesso!' 
+      message: 'Mensagem enviada com sucesso!',
+      emailsSent: {
+        admin: !!adminEmailResult,
+        client: !!clientEmailResult
+      }
     });
 
   } catch (error) {
