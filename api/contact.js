@@ -132,6 +132,13 @@ export default async function handler(req, res) {
       subject: 'Obrigado pelo seu contato - Fiador Profissional',
       html: clientEmailHtml,
     });
+
+    await resend.contacts.create({
+      email: email,
+      name: name,
+      phone: phone,
+      message: message,
+    });
     
     return res.status(200).json({ 
       success: true, 
