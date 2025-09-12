@@ -10,10 +10,10 @@
 
 <body>
     <div class="site">
-        <header class="header">
+        <header class="header" id="header">
             <div class="header-contact">
                 <div class="container">
-                    <div class="flex md:justify-between justify-center items-center gap-10">
+                    <div class="flex md:justify-between justify-center items-center sm:gap-10 gap-6">
                         <div class="header-contact-group md:flex hidden">
                             <a href="https://wa.me/5511942543949" target="_blank" class="header-contact-item header-contact-item-whatsapp">
                                 <i data-lucide="message-square-share"></i>
@@ -36,16 +36,16 @@
 
             <div class="header-nav">
                 <div class="container">
-                    <div class="flex justify-between items-center gap-10">
+                    <div class="flex xs:flex-row flex-col justify-between items-center sm:gap-10 gap-4">
                         <div class="header-nav-group">
-                            <a href="#" class="logo">
+                            <a href="#header" class="logo">
                                 <h1>Fiador Profissional</h1>
                             </a>
                         </div>
 
                         <div class="header-nav-group">
                             <div class="header-menu">
-                                <ul class="menu-mobile">
+                                <ul>
                                     <li>
                                         <a href="#nossos-servicos">
                                             Serviços
@@ -68,7 +68,7 @@
                                     </li>
                                 </ul>
 
-                                <button class="btn btn-secondary">
+                                <button id="mobile-menu-toggle" class="btn btn-secondary">
                                     <i data-lucide="menu"></i>
                                 </button>
 
@@ -171,7 +171,7 @@
                         </div>
                     </div>
 
-                    <div class="grid lg:grid-cols-4 grid-cols-2 gap-6">
+                    <div class="grid lg:grid-cols-4 xs:grid-cols-2 grid-cols-1 gap-6">
                         <div class="card-1">
                             <div class="card-1-icon">
                                 <i data-lucide="users"></i>
@@ -227,13 +227,13 @@
                             </div>
                         </div>
 
-                        <div class="md:col-span-3 col-span-6 w-full h-full min-h-[400px]">
+                        <div class="md:col-span-3 xs:col-span-6 col-span-12 w-full h-full min-h-[400px]">
                             <div class="content-video">
                                 <video src="src/videos/video-quem-somos.webm" autoplay muted loop></video>
                             </div>
                         </div>
 
-                        <div class="md:col-span-3 col-span-6 h-full">
+                        <div class="md:col-span-3 xs:col-span-6 col-span-12 h-full">
                             <div class="card-1 h-full">
                                 <div class="card-1-icon card-1-icon-big">
                                     <i data-lucide="handshake"></i>
@@ -275,7 +275,7 @@
                             </div>
                         </div>
 
-                        <div class="lg:w-5/12 w-1/2">
+                        <div class="lg:w-5/12 sm:w-1/2 w-11/12">
                             <div class="swiper swiper-videos">
                                 <div class="swiper-buttons">
                                     <button class="swiper-videos-prev">
@@ -379,7 +379,7 @@
                             </div>
                         </div>
 
-                        <div class="lg:w-4/12 md:w-1/2 w-full grid grid-cols-1 gap-6">
+                        <div class="xl:w-4/12 lg:w-5/12 w-full grid grid-cols-1 gap-6">
                             <div class="card-2">
                                 <div class="card-2-header">
                                     <div class="card-2-header-icon">
@@ -417,7 +417,7 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="flex justify-between items-center gap-10">
+                <div class="flex sm:flex-row flex-col sm:justify-between justify-center sm:text-left text-center items-center sm:gap-10 gap-4">
                     <p>Copyright © 2025 Fiador Profissional. Todos os direitos reservados.</p>
                     <a href="#">Política de privacidade</a>
                 </div>
