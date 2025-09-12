@@ -1414,10 +1414,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .content-text p{
-  font-size:1.125rem;
-  line-height:1.75rem;
+  font-size:1rem;
+  line-height:1.5rem;
   --tw-text-opacity:1;
   color:rgb(23 25 38 / var(--tw-text-opacity, 1))
+}
+
+@media (min-width: 640px){
+  .content-text p{
+    font-size:1.125rem;
+    line-height:1.75rem
+  }
 }
 
 .content-text-light h2,
@@ -1762,8 +1769,15 @@ h1, h2, h3, h4, h5, h6{
 /* Nossos serviços */
 
 .nossos-servicos{
-  padding-top:6rem;
-  padding-bottom:6rem
+  padding-top:5rem;
+  padding-bottom:5rem
+}
+
+@media (min-width: 640px){
+  .nossos-servicos{
+    padding-top:6rem;
+    padding-bottom:6rem
+  }
 }
 
 /* Cards */
@@ -2050,8 +2064,15 @@ h1, h2, h3, h4, h5, h6{
   --tw-gradient-from-position:-80%;
   --tw-gradient-to:#171926 var(--tw-gradient-to-position);
   --tw-gradient-to-position:60%;
-  padding-top:6rem;
-  padding-bottom:6rem
+  padding-top:5rem;
+  padding-bottom:5rem
+}
+
+@media (min-width: 640px){
+  .quem-somos{
+    padding-top:6rem;
+    padding-bottom:6rem
+  }
 }
 
 .quem-somos .content-video{
@@ -2081,8 +2102,15 @@ h1, h2, h3, h4, h5, h6{
 
 .depoimentos{
   overflow:hidden;
-  padding-top:6rem;
-  padding-bottom:6rem
+  padding-top:5rem;
+  padding-bottom:5rem
+}
+
+@media (min-width: 640px){
+  .depoimentos{
+    padding-top:6rem;
+    padding-bottom:6rem
+  }
 }
 
 .depoimentos .swiper .swiper-slide{
@@ -2138,8 +2166,15 @@ h1, h2, h3, h4, h5, h6{
 .fale-conosco{
   --tw-bg-opacity:1;
   background-color:rgb(244 245 246 / var(--tw-bg-opacity, 1));
-  padding-top:6rem;
-  padding-bottom:6rem
+  padding-top:5rem;
+  padding-bottom:5rem
+}
+
+@media (min-width: 640px){
+  .fale-conosco{
+    padding-top:6rem;
+    padding-bottom:6rem
+  }
 }
 
 .form-group{

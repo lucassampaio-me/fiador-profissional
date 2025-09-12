@@ -63,7 +63,7 @@
     
     .content-text p {
         @apply
-        text-tertiary text-lg
+        text-tertiary sm:text-lg text-base
     }
 
     .content-text-light h2,
@@ -236,7 +236,7 @@
 
     .nossos-servicos {
         @apply
-        py-24
+        sm:py-24 py-20
     }
 
     /* Cards */
@@ -405,7 +405,7 @@
 
     .quem-somos {
         @apply
-        py-24
+        sm:py-24 py-20
         bg-gradient-to-t from-secondary/50 to-tertiary from-[-80%] to-[60%]
         bg-tertiary
     }
@@ -427,7 +427,7 @@
 
     .depoimentos {
         @apply
-        py-24
+        sm:py-24 py-20
         overflow-hidden
     }
 
@@ -465,7 +465,7 @@
 
     .fale-conosco {
         @apply
-        py-24
+        sm:py-24 py-20
         bg-gray-50
     }
 
