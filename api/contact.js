@@ -118,20 +118,24 @@ export default async function handler(req, res) {
     `;
 
     // Enviar email de notificação para o admin
-    await resend.emails.send({
+    const adminEmailResult = await resend.emails.send({
       from: 'Fiador Profissional <contato@resend.dev>',
       to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
       subject: `🏠 Novo contato: ${name}`,
       html: adminEmailHtml,
     });
 
+    console.log('Admin email result:', adminEmailResult);
+
     // Enviar email de confirmação para o cliente
-    await resend.emails.send({
+    const clientEmailResult = await resend.emails.send({
       from: 'Fiador Profissional <contato@resend.dev>',
       to: [email],
       subject: 'Obrigado pelo seu contato - Fiador Profissional',
       html: clientEmailHtml,
     });
+
+    console.log('Client email result:', clientEmailResult);
     
     return res.status(200).json({ 
       success: true, 
