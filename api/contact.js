@@ -125,10 +125,13 @@ export default async function handler(req, res) {
       html: adminEmailHtml,
     });
 
+    // Aguardar 1 segundo para respeitar o rate limit
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
     // Enviar email de confirmação para o cliente
     await resend.emails.send({
       from: 'Fiador Profissional <contato@resend.dev>',
-      to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
+      to: [email],
       subject: 'Obrigado pelo seu contato - Fiador Profissional',
       html: clientEmailHtml,
     });
