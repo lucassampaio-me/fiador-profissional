@@ -1,12 +1,15 @@
 {
   "scripts": {
-    "build:css-watch": "tailwindcss -i ../css/input.css -o ../css/output.css --watch"
+    "build:css-watch": "tailwindcss -i ../css/input.css -o ../css/output.css --watch",
+    "build:css-minify": "tailwindcss -i ../css/input.css -o ../css/output.min.css --minify",
+    "build:js": "terser ../js/lucide.min.js ../js/slides.js ../js/swiper-bundle.min.js ../js/dataLayer.js ../js/main.js -c -m -o ../js/bundle.min.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
     "lucide": "^0.542.0",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "terser": "^5.44.0"
   }
 }

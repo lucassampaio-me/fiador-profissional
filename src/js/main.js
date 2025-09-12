@@ -135,7 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
 
                 if (response.ok && result.success) {
-                    // Success - show modal and reset form
+                    // Success - track form submission and show modal
+                    if (typeof window.trackFormSubmissionSuccess === 'function') {
+                        window.trackFormSubmissionSuccess(data);
+                    }
                     contactForm.reset();
                     showSuccessModal();
                 } else {
