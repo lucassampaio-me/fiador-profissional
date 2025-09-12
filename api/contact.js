@@ -120,7 +120,7 @@ export default async function handler(req, res) {
     // Enviar email de notificação para o admin
     await resend.emails.send({
       from: 'Fiador Profissional <contato@resend.dev>',
-      to: [process.env.CONTACT_EMAIL],
+      to: [process.env.CONTACT_EMAIL || 'contato@fiadorprofissional.com.br'],
       subject: `🏠 Novo contato: ${name}`,
       html: adminEmailHtml,
     });
@@ -136,10 +136,11 @@ export default async function handler(req, res) {
       html: clientEmailHtml,
     });
 
-    // Adicionar contato à audiência (substitua 'sua-audiencia-id' pelo ID real da sua audiência)
-    await resend.contacts.create({
+    resend.contacts.create({
       email: email,
-      firstName: name,
+      name: name,
+      phone: phone,
+      message: message,
       audienceId: process.env.RESEND_AUDIENCE_ID
     });
     
