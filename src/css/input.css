@@ -48,6 +48,11 @@
         bg-secondary text-white hover:bg-secondary-dark
     }
 
+    .btn-whatsapp {
+        @apply
+        bg-whatsapp text-white hover:bg-whatsapp-hover
+    }
+
     /* Content Text */
 
     .content-text {
@@ -123,15 +128,20 @@
 
     .header-contact-item svg {
         @apply
-        w-4 h-4
+        w-4 h-4 stroke-secondary
     }
 
     .header-contact-item-whatsapp {
         @apply
         px-3 py-1
-        bg-white/10 rounded-lg
-        hover:bg-secondary
+        bg-whatsapp rounded-lg
+        hover:bg-whatsapp-hover
         transition-all duration-300
+    }
+
+    .header-contact-item-whatsapp svg {
+        @apply
+        stroke-white
     }
 
     .header-nav {
@@ -201,7 +211,7 @@
 
     .hero-content .content-text h2 {
         @apply
-        xs:text-4xl text-3xl text-white
+        xs:text-4xl text-2xl text-white
         font-medium leading-tight
     }
 
@@ -251,14 +261,14 @@
         @apply
         w-16 h-16
         min-h-16 min-w-16
-        bg-secondary/50 rounded-lg
+        bg-secondary rounded-lg
         flex items-center justify-center
     }
 
     .card-1-icon svg {
         @apply
         w-8 h-8
-        text-primary
+        text-white
     }
 
     .card-1-icon.card-1-icon-big {
@@ -295,12 +305,12 @@
 
     .card-1-destaque .card-1-icon {
         @apply
-        bg-secondary text-white
+        bg-secondary
     }
 
     .card-1-destaque .card-1-icon svg {
         @apply
-        text-primary
+        text-white
     }
 
     .card-1-destaque .card-1-content h3 {
@@ -325,14 +335,14 @@
     .card-2-header-icon {
         @apply
         w-16 h-16
-        bg-secondary/50 rounded-lg
+        bg-secondary rounded-lg
         flex items-center justify-center
     }
 
     .card-2-header svg {
         @apply
         w-6 h-6
-        text-primary
+        text-white
     }
 
     .card-2-header-content p {
@@ -449,7 +459,7 @@
     .swiper-videos .swiper-buttons button {
         @apply
         w-10 h-10
-        bg-secondary rounded-full text-primary
+        bg-secondary rounded-full text-white
         flex items-center justify-center
         pointer-events-auto
         transition-all duration-300

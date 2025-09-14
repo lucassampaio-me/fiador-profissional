@@ -44,7 +44,7 @@
     <meta property="twitter:description" content="Fiadores profissionais qualificados para locação de imóveis. Pague apenas após aprovação. +20 mil locações aprovadas.">
     <meta property="twitter:image" content="https://www.fiadorprofissional.com.br/src/images/og-image.webp">
 
-    <link rel="stylesheet" href="src/css/output.min.css">
+    <link rel="stylesheet" href="src/css/output.css">
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -161,8 +161,8 @@
                 "@id": "https://www.fiadorprofissional.com.br/#organization",
                 "name": "Fiador Profissional",
                 "url": "https://www.fiadorprofissional.com.br/",
-                "logo": "https://www.fiadorprofissional.com.br/src/images/logo.webp",
-                "description": "Empresa com mais de 15 anos de experiência no mercado de fiadores profissionais para locação imobiliária.",
+                "logo": "https://www.fiadorprofissional.com.br/src/images/logo-fiador-profissional.svg",
+                "description": "Empresa com mais de 25 anos de experiência no mercado de fiadores profissionais para locação imobiliária.",
                 "foundingDate": "2009",
                 "numberOfEmployees": "10-50",
                 "contactPoint": {
@@ -225,7 +225,8 @@
                     <div class="flex xs:flex-row flex-col justify-between items-center sm:gap-10 gap-4">
                         <div class="header-nav-group">
                             <a href="#header" class="logo">
-                                <h1>Fiador Profissional</h1>
+                                <h1 class="sr-only">Fiador Profissional</h1>
+                                <img src="src/images/logo-fiador-profissional.svg" alt="Fiador Profissional" class="w-auto h-14">
                             </a>
                         </div>
 
@@ -258,7 +259,7 @@
                                     <i data-lucide="menu"></i>
                                 </button>
 
-                                <a href="https://wa.me/5511942543949" target="_blank" class="btn btn-primary">
+                                <a href="https://wa.me/5511942543949" target="_blank" class="btn btn-whatsapp">
                                     Fale no WhatsApp
                                     <i data-lucide="message-square-more"></i>
                                 </a>
@@ -293,7 +294,7 @@
                                     <a href="#fale-conosco" class="btn btn-primary">
                                         Contratar fiador
                                     </a>
-                                    <a href="#" class="btn">
+                                    <a href="#nossos-servicos" class="btn">
                                         Conheça nossos serviços
                                     </a>
                                 </div>
@@ -407,7 +408,7 @@
                         <div class="md:col-span-6 col-span-12">
                             <div class="content-text content-text-light">
                                 <h2>Quem Somos</h2>
-                                <p>Com mais de 15 anos de experiência no mercado de contratação, somos uma empresa comprometida com respeito, transparência e excelência no atendimento aos nossos clientes. Nosso compromisso com a qualidade e a ética tem nos permitido construir confiança e confiança em segmentos de fiador profissional.</p>
+                                <p>Com mais de <strong>25 anos de experiência</strong> no mercado de contratação, somos uma empresa comprometida com respeito, transparência e excelência no atendimento aos nossos clientes. Nosso compromisso com a qualidade e a ética tem nos permitido construir confiança e confiança em segmentos de fiador profissional.</p>
                                 <p>Temos como objetivo encontrar soluções para atender as suas necessidades com qualidade, bom atendimento, agilidade e custos vantajosos.</p>
                                 <a href="#depoimentos" class="btn btn-primary">Saiba mais</a>
                             </div>
@@ -530,68 +531,70 @@
             <section id="fale-conosco" class="fale-conosco">
                 <div class="container">
                     <div class="flex lg:flex-row flex-col gap-10 lg:items-start items-center justify-center">
-                        <div class="lg:w-5/12 md:w-1/2 w-full md:max-w-full max-w-xl">
+                        <div class="lg:w-10/12 md:w-7/12 w-full md:max-w-full max-w-xl">
                             <div class="content-text mb-6">
                                 <h2>Fale conosco</h2>
                                 <p>Entre em contato através do nosso formulário de contato ou nos envie uma mensagem no WhatsApp</p>
                             </div>
 
-                            <div class="content-form mb-6">
-                                <form id="contact-form" class="grid grid-cols-1 gap-4">
-                                    <div class="form-group">
-                                        <label for="name">Nome:</label>
-                                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">E-mail:</label>
-                                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Telefone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message">Mensagem:</label>
-                                        <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary" id="submit-btn">
-                                            <span class="btn-text">Enviar mensagem</span>
-                                            <span class="btn-loading" style="display: none;">Enviando...</span>
-                                            <i data-lucide="send"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="xl:w-4/12 lg:w-5/12 w-full grid grid-cols-1 gap-6">
-                            <div class="card-2">
-                                <div class="card-2-header">
-                                    <div class="card-2-header-icon">
-                                        <i data-lucide="phone"></i>
-                                    </div>
-                                    <div class="card-2-header-content">
-                                        <h3>Telefone/WhatsApp</h3>
-                                        <p>11 94254-3949</p>
-                                    </div>
+                            <div class="flex lg:flex-row flex-col-reverse gap-10 w-full">
+                                <div class="w-full content-form mb-6">
+                                    <form id="contact-form" class="grid grid-cols-1 gap-4">
+                                        <div class="form-group">
+                                            <label for="name">Nome:</label>
+                                            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">E-mail:</label>
+                                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Telefone:</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Mensagem:</label>
+                                            <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary" id="submit-btn">
+                                                <span class="btn-text">Enviar mensagem</span>
+                                                <span class="btn-loading" style="display: none;">Enviando...</span>
+                                                <i data-lucide="send"></i>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="card-2-content">
-                                    <a href="https://wa.me/5511942543949" target="_blank" class="btn btn-primary">
-                                        Fale no WhatsApp
-                                        <i data-lucide="message-square-more"></i>
-                                    </a>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-2">
-                                <div class="card-2-header">
-                                    <div class="card-2-header-icon">
-                                        <i data-lucide="mail"></i>
+    
+                                <div class="w-full flex flex-col gap-4">
+                                    <div class="card-2">
+                                        <div class="card-2-header">
+                                            <div class="card-2-header-icon">
+                                                <i data-lucide="phone"></i>
+                                            </div>
+                                            <div class="card-2-header-content">
+                                                <h3>Telefone/WhatsApp</h3>
+                                                <p>11 94254-3949</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-2-content">
+                                            <a href="https://wa.me/5511942543949" target="_blank" class="btn btn-whatsapp">
+                                                Fale no WhatsApp
+                                                <i data-lucide="message-square-more"></i>
+                                            </a>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="card-2-header-content">
-                                        <h3>E-mail</h3>
-                                        <p>contato@fiadorprofissional.com.br</p>
+                                    <div class="card-2">
+                                        <div class="card-2-header">
+                                            <div class="card-2-header-icon">
+                                                <i data-lucide="mail"></i>
+                                            </div>
+                                            <div class="card-2-header-content">
+                                                <h3>E-mail</h3>
+                                                <p>contato@fiadorprofissional.com.br</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
