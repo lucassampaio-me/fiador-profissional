@@ -50,9 +50,9 @@ module.exports = {
       },
 
       colors: {
-        primary: '#111111',
-        secondary: '#b91f1d',
-        'secondary-dark': '#981e1c',
+        primary: '#16153C',
+        secondary: '#16a34b',
+        'secondary-dark': '#15803e',
         tertiary: '#010101',
         whatsapp: '#16a34b',
         'whatsapp-hover': '#15803e',

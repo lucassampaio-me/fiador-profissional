@@ -204,7 +204,7 @@
         @apply
         relative overflow-hidden
         py-20 
-        bg-gradient-to-t from-secondary to-tertiary from-[-30%] to-[90%]
+        bg-gradient-to-t from-secondary to-primary from-[-30%] to-[90%]
     }
 
     .hero-content .content-text {
@@ -303,7 +303,7 @@
 
     .card-1-destaque {
         @apply
-        bg-tertiary text-white
+        bg-primary text-white
     }
 
     .card-1-destaque .card-1-icon {
@@ -419,8 +419,8 @@
     .quem-somos {
         @apply
         sm:py-24 py-20
-        bg-gradient-to-t from-secondary/50 to-tertiary from-[-80%] to-[60%]
-        bg-tertiary
+        bg-gradient-to-t from-secondary/50 to-primary from-[-80%] to-[60%]
+        bg-primary
     }
 
     .quem-somos .content-video {
