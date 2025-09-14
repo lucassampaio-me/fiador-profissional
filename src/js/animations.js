@@ -79,13 +79,10 @@ function initHeroAnimations() {
     }
     
     if (heroTitle) {
-        const titleSplit = new SplitText(heroTitle, { type: "lines" });
-        
-        tl.from(titleSplit.lines, {
+        tl.from(heroTitle, {
             y: 50,
             opacity: 0,
             duration: 1,
-            stagger: 0.2,
             ease: "power3.out"
         }, "-=0.5");
     }
