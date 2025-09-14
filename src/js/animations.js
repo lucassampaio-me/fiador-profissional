@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-ScrollSmoother.create({
+const smoother = ScrollSmoother.create({
     wrapper: "#smooth-wrapper",
     content: "#smooth-content",
     smooth: 1,
@@ -8,6 +8,48 @@ ScrollSmoother.create({
 });
 
 gsap.set("html", { scrollBehavior: "auto" });
+
+function handleAnchorLinks() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            if (href === '#' || href === '#header') {
+                e.preventDefault();
+                smoother.scrollTo(0, true);
+                return;
+            }
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                smoother.scrollTo(target, true);
+            }
+        });
+    });
+}
+
+function handleInitialHash() {
+    const hash = window.location.hash;
+
+    if (hash && hash.length > 1) {
+        if (hash === '#header') {
+            setTimeout(() => {
+                smoother.scrollTo(0, false);
+            }, 100);
+            return;
+        }
+
+        const target = document.querySelector(hash);
+        if (target) {
+            setTimeout(() => {
+                smoother.scrollTo(target, false);
+            }, 100);
+        }
+    }
+}
 
 function initHeroAnimations() {
     const heroSection = document.querySelector('.hero');
@@ -283,9 +325,15 @@ function initFaleConoscoAnimations() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    handleAnchorLinks();
     initHeroAnimations();
     initNossosServicosAnimations();
     initQuemSomosAnimations();
     initDepoimentosAnimations();
     initFaleConoscoAnimations();
+
+    // Aguarda um pouco mais para garantir que todas as animações foram inicializadas
+    setTimeout(() => {
+        handleInitialHash();
+    }, 200);
 });
